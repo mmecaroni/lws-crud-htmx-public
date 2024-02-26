@@ -46,11 +46,11 @@ function lws_crud_htmx_enqueue_scripts($hook_suffix) {
 			return;
 	}
 	wp_enqueue_style(
-		'tailwindcss', 
-		plugin_dir_url(__FILE__) . 'assets/vendors/tailwind.min.css', 
-		array(), 
-		'3.4.1', 
-		'all'
+    'tailwindcss', 
+    'https://cdn.tailwindcss.com', 
+    array(), 
+    '3.4.1', 
+    'all'
 	);
 	wp_enqueue_script(
 		'htmx', 
