@@ -3,6 +3,6 @@
  * View for testing
  */
 
-function lws_view_card(){
-  echo "View-Card 001";
+function lws_dashboard_view_card(){
+  echo "View-Dashboard-Card";
 }
