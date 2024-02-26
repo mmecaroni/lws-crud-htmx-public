@@ -39,3 +39,31 @@ require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/htmx/page-htmx.php";
 require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/tailwind/page-tailwind.php";
 require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/alpine/page-alpine.php";
 require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/settings/page-settings.php";
+
+function lws_crud_htmx_enqueue_scripts($hook_suffix) {
+	// Check if the current page belongs to the plugin's admin pages
+	if (strpos($hook_suffix, 'lws_crud_htmx') === false) {
+			return;
+	}
+	wp_enqueue_style(
+		'tailwindcss', 
+		plugin_dir_url(__FILE__) . 'assets/vendors/taillwind@3.4.1.min.css', 
+		array(), 
+		'3.4.1', 
+		'all'
+	);
+	wp_enqueue_script(
+		'htmx', 
+		plugin_dir_url(__FILE__) . 'assets/vendors/htmx@1.9.10.min.js', 
+		array(), 
+		'1.9.10', 
+		true
+	);
+	wp_enqueue_script(
+		'alpinejs', 
+		plugin_dir_url(__FILE__) . 'assets/vendors/alpine@3.13.5.min.js', 
+		array(), 
+		'3.13.5', 
+		true);
+}
+add_action('admin_enqueue_scripts', 'lws_crud_htmx_enqueue_scripts');
