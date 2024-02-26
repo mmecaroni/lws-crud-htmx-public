@@ -47,7 +47,7 @@ function lws_crud_htmx_enqueue_scripts($hook_suffix) {
 	}
 	wp_enqueue_style(
 		'tailwindcss', 
-		plugin_dir_url(__FILE__) . 'assets/vendors/taillwind@3.4.1.min.css', 
+		plugin_dir_url(__FILE__) . 'assets/vendors/tailwind.min.css', 
 		array(), 
 		'3.4.1', 
 		'all'
