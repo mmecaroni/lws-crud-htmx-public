@@ -15,18 +15,24 @@ GitHub Branch: master
 /****** Get lost! */
 if (!defined('ABSPATH')) { exit; }
 
+define( 'LWS_CRUD_HTMX_VERSION', 'v0.4.0-beta' );
+define( 'LWS_CRUD_HTMX_DIR', plugin_dir_path( __FILE__ ) );
+define( 'LWS_CRUD_HTMX_ROOT_FILE', __FILE__ );
+define( 'LWS_CRUD_HTMX_ROOT_FILE_RELATIVE_PATH', plugin_basename( __FILE__ ) );
+define( 'LWS_CRUD_HTMX_SLUG', 'lws_admin_settings' );
+define( 'LWS_CRUD_HTMX_FOLDER', dirname( plugin_basename( __FILE__ ) ) );
+define( 'LWS_CRUD_HTMX_URL', plugins_url( '', __FILE__ ) );
+
 /****** Display Version */
 add_action("wp_footer", function() {
-	echo "<p>LWS Crud Htmx Public | <small>v0.0.1-beta</small></p>";
+	echo "<p>LWS Crud Htmx Public | <small>" . LWS_CRUD_HTMX_VERSION . "</small></p>";
 });
 
-/****** Constant for Plugin Path */
-define('LWS_CRUD_HTMX_PUBLIC_FILE_PATH', plugin_dir_path(__FILE__));
-/****** Main Plugin File Constant */
-define('LWS_CRUD_HTMX_PUBLIC_MAIN_FILE', __FILE__);
+
 
 /****** Require Menu handler file*/
-require_once trailingslashit(LWS_CRUD_HTMX_PUBLIC_FILE_PATH) . 'includes/menu/add-menu-pages.php';
+require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'includes/menu/add-menu-pages.php';
 
 /****** EXAMPLE REQUIRE */
-require_once trailingslashit(LWS_CRUD_HTMX_PUBLIC_FILE_PATH) . "packages/dashboard/page-dashboard.php";
+require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/dashboard/page-dashboard.php";
+require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/settings/page-settings.php";
