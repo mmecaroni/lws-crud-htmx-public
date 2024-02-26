@@ -25,5 +25,8 @@ define('LWS_CRUD_HTMX_PUBLIC_FILE_PATH', plugin_dir_path(__FILE__));
 /****** Main Plugin File Constant */
 define('LWS_CRUD_HTMX_PUBLIC_MAIN_FILE', __FILE__);
 
+/****** Require Menu handler file*/
+require_once trailingslashit(LWS_CRUD_HTMX_PUBLIC_FILE_PATH) . 'includes/menu/add-menu-pages.php';
+
 /****** EXAMPLE REQUIRE */
 require_once trailingslashit(LWS_CRUD_HTMX_PUBLIC_FILE_PATH) . "packages/dashboard/page-dashboard.php";

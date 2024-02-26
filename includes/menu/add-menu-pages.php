@@ -38,4 +38,4 @@ function lws_crud_htmx_menu_pages() {
     //     'demo_page_settings_renderer'
     // );
 }
-add_action('admin_menu', 'demo_custom_menu_pages');
+add_action('admin_menu', 'lws_crud_htmx_menu_pages');
