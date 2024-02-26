@@ -35,4 +35,7 @@ require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'includes/menu/add-menu-pages.
 
 /****** EXAMPLE REQUIRE */
 require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/dashboard/page-dashboard.php";
+require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/htmx/page-htmx.php";
+require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/tailwind/page-tailwind.php";
+require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/alpine/page-alpine.php";
 require_once trailingslashit(LWS_CRUD_HTMX_DIR) . "packages/settings/page-settings.php";

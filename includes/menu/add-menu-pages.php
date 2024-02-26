@@ -12,6 +12,9 @@ function lws_crud_htmx_menu_pages() {
     );
 
     require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'packages/dashboard/admin-menu.php';
+    require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'packages/htmx/admin-menu.php';
+    require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'packages/tailwind/admin-menu.php';
+    require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'packages/alpine/admin-menu.php';
     require_once trailingslashit(LWS_CRUD_HTMX_DIR) . 'packages/settings/admin-menu.php';
 
 }
